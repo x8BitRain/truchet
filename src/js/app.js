@@ -541,8 +541,12 @@ let str = output.substring(0, output.length - 1)
 container.innerHTML = str;
 
 const thing = () => {
-  let bgcols = document.querySelector("#container > svg > rect").style.fill
+	let bgcols = document.querySelector("#container > svg > rect").style.fill
   document.querySelector("body").style.backgroundColor = bgcols
+	let svgitself = document.querySelector("#container > svg");
+	svgitself.setAttribute("height", "auto");
+	svgitself.setAttribute("weight", "auto");
+	svgitself.setAttribute("viewBox", "0 0 1600 1600");
 }
 
 if (container.innerHTML === "") {
